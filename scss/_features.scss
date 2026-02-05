@@ -1,0 +1,767 @@
+@use 'variables' as *;
+
+.features {
+  padding: $padding-section-medium 0;
+  background-color: $color-grey-95;
+}
+
+.features__container {
+  max-width: $container-large;
+  margin: 0 auto;
+  padding: 0 $spacing-6;
+}
+
+.features__header {
+  text-align: center;
+  margin-bottom: $spacing-16;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-8;
+}
+
+.feature-card {
+  background-color: $color-white;
+  padding: $spacing-8;
+  border-radius: $border-radius-lg;
+  text-align: center;
+  box-shadow: $shadow-small;
+  transition: transform $transition-normal, box-shadow $transition-normal;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-medium;
+  }
+}
+
+.feature-card__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto $spacing-6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color-primary, 0.1);
+  border-radius: $border-radius-lg;
+
+  img,
+  svg {
+    width: 32px;
+    height: 32px;
+    color: $color-primary;
+  }
+}
+
+.feature-card__title {
+  font-size: $text-lg;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $spacing-3;
+  color: $color-cocoa-brown;
+}
+
+.feature-card__description {
+  font-size: $text-regular;
+  color: $color-text-muted;
+  line-height: $line-height-relaxed;
+}
+
+.feature-section {
+  padding: $padding-section-medium 0;
+}
+
+.feature-section--alt {
+  background-color: $color-grey-95;
+}
+
+.feature-section--dark {
+  background-color: $color-dark-bg;
+  color: $color-white;
+
+  .section-title,
+  .feature-section__title {
+    color: $color-white;
+  }
+
+  .feature-section__text {
+    color: $color-white-40;
+  }
+}
+
+.feature-section--light-blue {
+  background-color: $color-light-blue;
+}
+
+.feature-section__container {
+  max-width: $container-large;
+  margin: 0 auto;
+  padding: 0 $spacing-6;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $padding-global;
+  align-items: center;
+}
+
+.feature-section__container--reverse {
+  direction: rtl;
+
+  >* {
+    direction: ltr;
+  }
+}
+
+.feature-section__content {
+  max-width: $max-width-medium;
+}
+
+.feature-section__badge {
+  margin-bottom: $spacing-4;
+}
+
+.feature-section__title {
+  font-size: $text-2xl;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $spacing-4;
+  color: $color-cocoa-brown;
+}
+
+.feature-section__text {
+  font-size: $text-regular;
+  color: $color-text-muted;
+  margin-bottom: $spacing-6;
+  line-height: $line-height-relaxed;
+}
+
+.feature-section__list {
+  margin-bottom: $spacing-6;
+}
+
+.feature-section__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-3;
+  margin-bottom: $spacing-3;
+
+  &::before {
+    content: '';
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    background-color: $color-primary;
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  span {
+    font-size: $text-regular;
+    line-height: $line-height-normal;
+  }
+}
+
+.feature-section__image {
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius-xl;
+    box-shadow: $shadow-medium;
+  }
+}
+
+// EEG Devices Supported Section
+.eeg-devices {
+  padding: $padding-section-medium 0;
+  background-color: $color-white;
+}
+
+.eeg-devices__container {
+  max-width: $container-large;
+  margin: 0 auto;
+  padding: 0 $padding-global;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.eeg-devices__image {
+  flex-shrink: 0;
+  width: 549px;
+  height: 494px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+}
+
+.eeg-devices__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.eeg-devices__title {
+  font-size: $text-2xl;
+  font-weight: $font-weight-medium;
+  color: #002c6c;
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-8;
+}
+
+.eeg-devices__list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4;
+  padding: $spacing-2 0;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  margin-bottom: $spacing-8;
+
+  li {
+    font-size: $text-regular;
+    font-weight: $font-weight-regular;
+    color: #000000;
+    line-height: $line-height-normal;
+  }
+
+  .text-light {
+    font-weight: $font-weight-light;
+  }
+}
+
+.eeg-devices__note {
+  font-size: $text-medium;
+  font-weight: $font-weight-light;
+  color: #000000;
+  line-height: $line-height-normal;
+
+  strong {
+    font-weight: $font-weight-medium;
+  }
+}
+
+// EEG Devices Responsive
+@media (max-width: $breakpoint-desktop) {
+  .eeg-devices__container {
+    flex-direction: column;
+    gap: $spacing-10;
+  }
+
+  .eeg-devices__image {
+    width: 100%;
+    height: auto;
+    max-width: 549px;
+
+    img {
+      height: auto;
+    }
+  }
+}
+
+.partners {
+  padding: $padding-section-medium 0;
+  background-color: $color-white;
+}
+
+.partners__container {
+  max-width: $container-large;
+  margin: 0 auto;
+  padding: 0 $padding-global;
+}
+
+.partners__content {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+}
+
+.partners__title {
+  font-size: $text-xl;
+  font-weight: $font-weight-medium;
+  color: #000000;
+  line-height: 1.3;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.partners__logos {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.partners__logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+@media (max-width: $breakpoint-desktop) {
+  .partners__content {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .partners__title {
+    font-size: $text-lg;
+  }
+
+  .partners__logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .partners__logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+// Timeline Features Section
+.timeline-features {
+  padding: 80px 64px;
+  background-color: $color-white;
+}
+
+.timeline-features__container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.timeline-features__timeline {
+  display: flex;
+}
+
+.timeline-features__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-features__icon-row {
+  display: flex;
+  align-items: center;
+}
+
+.timeline-features__line {
+  flex: 1;
+  height: 2px;
+  background-color: $color-primary-sky;
+}
+
+.timeline-features__line--hidden {
+  background-color: transparent;
+}
+
+.timeline-features__icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  margin: 8px;
+}
+
+.timeline-features__content {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.timeline-features__title {
+  font-size: 20px;
+  font-weight: $font-weight-medium;
+  color: #383838;
+  margin-bottom: $spacing-2;
+}
+
+.timeline-features__description {
+  font-size: 16px;
+  font-weight: $font-weight-light;
+  color: #000000;
+}
+
+// Responsive: stack vertical on mobile
+@media (max-width: 767px) {
+  .timeline-features {
+    padding: 60px $spacing-6;
+  }
+
+  .timeline-features__timeline {
+    flex-direction: column;
+    gap: $spacing-10;
+  }
+
+  .timeline-features__line {
+    display: none;
+  }
+
+  .timeline-features__icon-row {
+    justify-content: center;
+  }
+
+  .timeline-features__content {
+    padding-top: $spacing-4;
+  }
+}
+
+// Stage Section (Project Vie-AI: Stage 1)
+.stage-section {
+  padding: $padding-section-medium 0;
+  background-color: $color-white;
+}
+
+.stage-section__container {
+  max-width: $container-large;
+  margin: 0 auto;
+  padding: 0 $padding-global;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.stage-section__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.stage-section__title {
+  font-size: $text-2xl;
+  font-weight: $font-weight-medium;
+  color: #002c6c;
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-6;
+}
+
+.stage-section__subtitle {
+  font-size: $text-medium;
+  font-weight: $font-weight-light;
+  color: #000000;
+  line-height: $line-height-normal;
+  margin-bottom: $spacing-8;
+}
+
+.stage-section__list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4;
+  padding: $spacing-2 0;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.stage-section__list-item {
+  font-size: $text-regular;
+  font-weight: $font-weight-light;
+  color: #000000;
+  line-height: $line-height-normal;
+
+  strong {
+    font-weight: $font-weight-regular;
+  }
+}
+
+.stage-section__image {
+  flex-shrink: 0;
+  width: 549px;
+  height: 494px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+  }
+}
+
+// Stage Section Responsive
+@media (max-width: $breakpoint-desktop) {
+  .stage-section__container {
+    flex-direction: column;
+    gap: $spacing-10;
+  }
+
+  .stage-section__image {
+    width: 100%;
+    height: auto;
+    max-width: 549px;
+
+    img {
+      height: auto;
+    }
+  }
+}
+
+// Why Vie-AI Hero Section (Layout 465)
+.why-vie-ai-hero {
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+}
+
+.why-vie-ai-hero__background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.why-vie-ai-hero__bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.why-vie-ai-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(173, 167, 169, 0.8) 100%);
+}
+
+.why-vie-ai-hero__container {
+  position: relative;
+  z-index: 1;
+  max-width: $container-large;
+  margin: 0 auto;
+  padding: $padding-section-medium $padding-global;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 650px;
+  gap: $spacing-8;
+}
+
+.why-vie-ai-hero__col {
+  &--title {
+    flex: 0 0 auto;
+    min-width: 300px;
+  }
+
+  &--content {
+    flex: 1;
+    max-width: 340px;
+    padding-top: 240px;
+  }
+
+  &--device {
+    flex-shrink: 0;
+    padding-top: 20px;
+  }
+}
+
+.why-vie-ai-hero__title {
+  font-size: $text-3xl;
+  font-weight: $font-weight-medium;
+  color: $color-white;
+  line-height: $line-height-tight;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.why-vie-ai-hero__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4;
+}
+
+.why-vie-ai-hero__list-item {
+  font-size: $text-regular;
+  font-weight: $font-weight-regular;
+  color: $color-white;
+  line-height: $line-height-normal;
+
+  strong {
+    font-weight: $font-weight-semibold;
+  }
+}
+
+.why-vie-ai-hero__device-frame {
+  background-color: #0c0c0c;
+  border: 2px solid #bcbcbc;
+  border-radius: 20px;
+  padding: 10px;
+
+  img {
+    display: block;
+    width: 285px;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+// Why Vie-AI Hero Responsive
+@media (max-width: $breakpoint-desktop) {
+  .why-vie-ai-hero__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: $spacing-10;
+  }
+
+  .why-vie-ai-hero__col {
+    &--title {
+      width: 100%;
+    }
+
+    &--content {
+      max-width: 100%;
+      padding-top: 0;
+    }
+
+    &--device {
+      padding-top: 0;
+    }
+  }
+}
+
+// Patent Section (Layout 670)
+.patent-section {
+  padding: $padding-section-medium 0;
+  background-color: $color-white;
+}
+
+.patent-section__container {
+  max-width: $container-large;
+  margin: 0 auto;
+  padding: 0 $padding-global;
+}
+
+.patent-section__card {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid #E5E5E5;
+  background:
+    linear-gradient(247deg, rgba(155, 192, 224, 0.00) 77.85%, rgba(155, 192, 224, 0.30) 100%),
+    linear-gradient(70deg, rgba(255, 234, 241, 0.00) 36.41%, #FFEAF1 100%),
+    #F5F5F5;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06);
+  padding: 24px 0 24px 32px;
+  overflow: hidden;
+}
+
+.patent-section__video {
+  flex: 1;
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid white;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.patent-section__video-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.patent-section__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1;
+  transition: transform $transition-normal;
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.patent-section__content {
+  flex: 1;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.patent-section__title {
+  font-size: 40px;
+  font-weight: $font-weight-medium;
+  color: #002C6C;
+  line-height: $line-height-tight;
+  margin: 0;
+}
+
+.patent-section__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  p {
+    font-size: $text-medium;
+    font-weight: $font-weight-light;
+    color: #383838;
+    line-height: $line-height-normal;
+    margin: 0 0 $spacing-4 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      font-weight: $font-weight-medium;
+    }
+  }
+}
+
+.patent-section__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 35px;
+  background-color: $color-white;
+  border: 1px solid $color-white;
+  border-radius: 999px;
+  color: #DE195C;
+  font-size: $text-regular;
+  font-weight: $font-weight-regular;
+  text-decoration: none;
+  transition: box-shadow $transition-normal;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Patent Section Responsive
+@media (max-width: $breakpoint-desktop) {
+  .patent-section__card {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .patent-section__video {
+    width: 100%;
+    height: 250px;
+  }
+
+  .patent-section__content {
+    padding: 32px 0 0 0;
+    text-align: center;
+  }
+
+  .patent-section__actions {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,140 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+.heading-1 {
+  font-size: $text-4xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  letter-spacing: -0.02em;
+}
+
+.heading-2 {
+  font-size: $text-3xl;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  letter-spacing: -0.01em;
+}
+
+.heading-3 {
+  font-size: $text-2xl;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+}
+
+.heading-4 {
+  font-size: $text-xl;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+}
+
+.heading-5 {
+  font-size: $text-lg;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-normal;
+}
+
+.heading-6 {
+  font-size: $text-medium;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-normal;
+}
+
+.text-large {
+  font-size: $text-medium;
+  line-height: $line-height-relaxed;
+}
+
+.text-regular {
+  font-size: $text-regular;
+  line-height: $line-height-relaxed;
+}
+
+.text-small {
+  font-size: $text-sm;
+  line-height: $line-height-normal;
+}
+
+.text-xs {
+  font-size: $text-xs;
+  line-height: $line-height-normal;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-muted {
+  color: $color-text-muted;
+}
+
+.text-primary {
+  color: $color-primary;
+}
+
+.text-white {
+  color: $color-white;
+}
+
+.font-light {
+  font-weight: $font-weight-light;
+}
+
+.font-regular {
+  font-weight: $font-weight-regular;
+}
+
+.font-medium {
+  font-weight: $font-weight-medium;
+}
+
+.font-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+.font-bold {
+  font-weight: $font-weight-bold;
+}
+
+.badge {
+  display: inline-block;
+  padding: $spacing-1-5 $spacing-3;
+  font-size: $text-xs;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: $border-radius-full;
+  background-color: rgba($color-primary, 0.1);
+  color: $color-primary;
+}
+
+.link {
+  color: $color-primary;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: color.adjust($color-primary, $lightness: -10%);
+  }
+}
+
+.section-title {
+  font-size: $text-3xl;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $spacing-4;
+  color: $color-cocoa-brown;
+}
+
+.section-subtitle {
+  font-size: $text-medium;
+  color: $color-text-muted;
+  max-width: $max-width-large;
+}

@@ -1,0 +1,35 @@
+@use 'variables' as *;
+@use 'reset';
+@use 'typography';
+@use 'buttons';
+@use 'forms';
+@use 'header';
+@use 'hero';
+@use 'features';
+@use 'faq';
+@use 'research';
+@use 'contact';
+@use 'footer';
+@use 'responsive';
+
+.container {
+  max-width: $container-large;
+  margin: 0 auto;
+  padding: 0 $spacing-6;
+}
+
+.container--small {
+  max-width: $container-small;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

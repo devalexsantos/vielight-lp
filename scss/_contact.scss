@@ -1,0 +1,623 @@
+@use 'variables' as *;
+
+// Early Access Section - Vie-AI
+$early-access-pink: #de195c;
+$early-access-text-secondary: #646464;
+$early-access-input-border: #eee;
+$early-access-input-bg: #fafafa;
+$early-access-card-bg: #f6f6f6;
+$early-access-btn-gradient-start: #016ab5;
+$early-access-btn-gradient-end: #2563eb;
+
+.early-access {
+  padding: $padding-section-medium 0;
+  background-color: $color-white;
+}
+
+.early-access__container {
+  max-width: $container-large;
+  margin: 0 auto;
+  padding: 0 $padding-global;
+}
+
+.early-access__card {
+  background-color: $early-access-card-bg;
+  border: 1px solid $color-border;
+  border-radius: 30px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06);
+  padding: $spacing-5;
+  display: flex;
+  gap: 0;
+  overflow: hidden;
+}
+
+.early-access__form-side {
+  width: 640px;
+  min-width: 640px;
+  background-image: url('../assets/images/track-your-brain-form-bg.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-12;
+}
+
+.early-access__form-wrapper {
+  width: 100%;
+  max-width: $max-width-sm;
+  background-color: $color-white;
+  border-radius: $border-radius-xl;
+  padding: $spacing-8;
+  text-align: center;
+}
+
+.early-access__logo {
+  height: 32px;
+  width: auto;
+  margin-bottom: $spacing-4;
+}
+
+.early-access__form-subtitle {
+  font-size: $text-regular;
+  color: $early-access-text-secondary;
+  margin-bottom: $spacing-6;
+}
+
+.early-access__form {
+  text-align: left;
+}
+
+.early-access__form-group {
+  margin-bottom: $spacing-4;
+}
+
+.early-access__label {
+  display: block;
+  font-size: $text-sm;
+  font-weight: $font-weight-medium;
+  color: $color-scheme-text;
+  margin-bottom: $spacing-1-5;
+}
+
+.early-access__input {
+  width: 100%;
+  padding: $spacing-3 $spacing-4;
+  font-size: $text-sm;
+  font-family: $font-family;
+  border: 1px solid $early-access-input-border;
+  border-radius: $border-radius-md;
+  background-color: $early-access-input-bg;
+  transition: border-color $transition-fast, box-shadow $transition-fast;
+
+  &::placeholder {
+    color: $early-access-text-secondary;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $early-access-btn-gradient-start;
+    box-shadow: 0 0 0 3px rgba($early-access-btn-gradient-start, 0.1);
+  }
+}
+
+.early-access__submit-btn {
+  width: 100%;
+  height: 36px;
+  padding: 0 $spacing-4;
+  font-size: $text-sm;
+  font-weight: $font-weight-medium;
+  font-family: $font-family;
+  color: $color-white;
+  background: linear-gradient(90deg, $early-access-btn-gradient-start 0%, $early-access-btn-gradient-end 100%);
+  border: none;
+  border-radius: $border-radius-md;
+  cursor: pointer;
+  transition: opacity $transition-fast, transform $transition-fast;
+  margin-top: $spacing-2;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.early-access__login-link {
+  font-size: $text-sm;
+  color: $early-access-text-secondary;
+  text-align: center;
+  margin-top: $spacing-4;
+
+  a {
+    color: $early-access-btn-gradient-start;
+    text-decoration: none;
+    font-weight: $font-weight-medium;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.early-access__content-side {
+  flex: 1;
+  padding: $spacing-12;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.early-access__title {
+  font-size: $text-lg;
+  font-weight: $font-weight-medium;
+  color: $early-access-pink;
+  margin-bottom: $spacing-4;
+}
+
+.early-access__description {
+  font-size: $text-sm;
+  color: $color-scheme-text;
+  line-height: $line-height-relaxed;
+  margin-bottom: $spacing-8;
+}
+
+.early-access__features {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-6;
+  margin-bottom: $spacing-8;
+}
+
+.early-access__feature {
+  display: flex;
+  gap: $spacing-4;
+  align-items: flex-start;
+}
+
+.early-access__feature-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.early-access__feature-content {
+  flex: 1;
+}
+
+.early-access__feature-title {
+  font-size: $text-regular;
+  font-weight: $font-weight-medium;
+  color: $early-access-pink;
+  margin-bottom: $spacing-1;
+}
+
+.early-access__feature-text {
+  font-size: $text-sm;
+  color: $color-scheme-text;
+  line-height: $line-height-relaxed;
+}
+
+.early-access__note {
+  font-size: $text-sm;
+  color: $color-scheme-text;
+  line-height: $line-height-relaxed;
+
+  strong {
+    font-weight: $font-weight-semibold;
+  }
+}
+
+// Responsive styles for Early Access
+@media (max-width: $breakpoint-desktop) {
+  .early-access__card {
+    flex-direction: column;
+  }
+
+  .early-access__form-side {
+    width: 100%;
+    min-width: auto;
+    min-height: 500px;
+  }
+
+  .early-access__content-side {
+    padding: $spacing-8;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .early-access__container {
+    padding: 0 $spacing-6;
+  }
+
+  .early-access__card {
+    padding: $spacing-3;
+    border-radius: 20px;
+  }
+
+  .early-access__form-side {
+    padding: $spacing-6;
+    min-height: 450px;
+    border-radius: $border-radius-xl;
+  }
+
+  .early-access__form-wrapper {
+    padding: $spacing-6;
+  }
+
+  .early-access__content-side {
+    padding: $spacing-6;
+  }
+}
+
+// Contact Section
+.contact {
+  padding: $padding-section-large 0;
+  background-color: $color-white;
+}
+
+.contact__container {
+  max-width: $container-large;
+  margin: 0 auto;
+  padding: 0 $padding-global;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.contact__header {
+  max-width: $max-width-large;
+  text-align: center;
+}
+
+.contact__title {
+  font-size: $text-3xl;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-tight;
+  color: #016ab5;
+  margin: 0 0 24px;
+}
+
+.contact__subtitle {
+  font-size: $text-medium;
+  font-weight: $font-weight-light;
+  line-height: $line-height-normal;
+  color: $color-scheme-text;
+
+  p {
+    margin: 0;
+  }
+
+  strong {
+    font-weight: $font-weight-medium;
+  }
+}
+
+.contact__link {
+  font-weight: $font-weight-medium;
+  color: $color-scheme-text;
+  text-decoration: underline;
+}
+
+.contact__form {
+  max-width: $max-width-large;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact__row {
+  display: flex;
+  gap: 24px;
+}
+
+.contact__field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact__label {
+  font-size: $text-regular;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-normal;
+  color: $color-scheme-text;
+}
+
+.contact__input {
+  width: 100%;
+  padding: 12px;
+  font-size: $text-regular;
+  font-family: $font-family;
+  background-color: #fafafa;
+  border: 1px solid #e6e6e6;
+  border-radius: $border-radius-md;
+  transition: border-color $transition-fast;
+
+  &:focus {
+    outline: none;
+    border-color: #016ab5;
+  }
+}
+
+.contact__textarea {
+  width: 100%;
+  height: 180px;
+  padding: 12px;
+  font-size: $text-regular;
+  font-family: $font-family;
+  background-color: #fafafa;
+  border: 1px solid #e6e6e6;
+  border-radius: $border-radius-md;
+  resize: vertical;
+  transition: border-color $transition-fast;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #016ab5;
+  }
+}
+
+.contact__radios {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.contact__radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact__radio-row {
+  display: flex;
+  gap: 24px;
+}
+
+.contact__radio {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+
+  input:checked + .contact__radio-circle {
+    border-color: #016ab5;
+    background-color: #016ab5;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      background-color: $color-white;
+      border-radius: 50%;
+    }
+  }
+}
+
+.contact__radio-circle {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  background-color: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+
+.contact__radio-text {
+  font-size: $text-regular;
+  line-height: $line-height-normal;
+  color: $color-scheme-text;
+}
+
+.contact__submit {
+  display: flex;
+  justify-content: center;
+}
+
+.contact__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 35px;
+  background-color: #de195c;
+  border: 1px solid #de195c;
+  border-radius: $border-radius-full;
+  color: $color-white;
+  font-size: $text-regular;
+  font-weight: $font-weight-regular;
+  font-family: $font-family;
+  cursor: pointer;
+  transition: opacity $transition-fast;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+// Contact Responsive
+@media (max-width: $breakpoint-tablet) {
+  .contact {
+    padding: $padding-section-medium 0;
+  }
+
+  .contact__container {
+    padding: 0 $spacing-6;
+  }
+
+  .contact__title {
+    font-size: $text-2xl;
+  }
+
+  .contact__subtitle {
+    font-size: $text-regular;
+  }
+
+  .contact__row {
+    flex-direction: column;
+  }
+
+  .contact__radio-row {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .contact__btn {
+    width: 100%;
+  }
+}
+
+// Unlock Brain Section (CTA Neuro Pro 2)
+.unlock-brain {
+  padding: $padding-section-large 0;
+  background-image: url('../assets/images/unlock-your-brain-bg.png');
+  background-size: cover;
+  background-position: center;
+  color: $color-white;
+}
+
+.unlock-brain__container {
+  max-width: $container-large;
+  margin: 0 auto;
+  padding: 0 $padding-global;
+}
+
+.unlock-brain__content {
+  display: flex;
+  gap: 80px;
+  align-items: flex-end;
+}
+
+.unlock-brain__description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.unlock-brain__text {
+  font-size: $text-medium;
+  line-height: $line-height-normal;
+
+  p {
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  strong {
+    font-weight: $font-weight-medium;
+  }
+}
+
+.unlock-brain__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 35px;
+  background-color: #de195c;
+  border: 1px solid #de195c;
+  border-radius: $border-radius-full;
+  color: $color-white;
+  font-size: $text-regular;
+  font-weight: $font-weight-regular;
+  text-decoration: none;
+  transition: opacity $transition-fast;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.unlock-brain__heading {
+  width: 600px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.unlock-brain__title {
+  font-size: $text-3xl;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-tight;
+  margin: 0;
+}
+
+.unlock-brain__subtitle {
+  font-size: $text-medium;
+  line-height: $line-height-normal;
+  margin: 0;
+}
+
+// Responsive
+@media (max-width: $breakpoint-desktop) {
+  .unlock-brain__content {
+    flex-direction: column-reverse;
+    gap: 48px;
+    align-items: flex-start;
+  }
+
+  .unlock-brain__heading {
+    width: 100%;
+  }
+
+  .unlock-brain__title {
+    font-size: $text-2xl;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .unlock-brain {
+    padding: $padding-section-medium 0;
+  }
+
+  .unlock-brain__container {
+    padding: 0 $spacing-6;
+  }
+
+  .unlock-brain__title {
+    font-size: $text-xl;
+  }
+
+  .unlock-brain__text {
+    font-size: $text-regular;
+  }
+
+  .unlock-brain__btn {
+    width: 100%;
+  }
+}
