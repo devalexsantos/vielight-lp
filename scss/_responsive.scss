@@ -24,8 +24,7 @@
   .hero__image {
     position: relative;
     right: auto;
-    top: auto;
-    transform: none;
+    bottom: auto;
     width: 100%;
     height: auto;
     margin-top: 40px;
@@ -38,6 +37,7 @@
   .hero__content {
     max-width: 100%;
     text-align: center;
+    padding-bottom: 0;
   }
 
   .hero__actions {
